@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff
+.ruff_cache/
+
+# RAG index (large, generated)
+.rag-index/
+
+# Generated outputs
+*.json
+!qa_sample.json
+!samples/*.json
+exports/
+
+# Throwaway reports are ignored; the one published sample run is committed.
+reports/*
+!reports/sample-run/
+!reports/sample-run/*.json
+!reports/sample-run/*.md
+
+# Sentence-transformers model cache
+.cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# macOS
+.DS_Store
