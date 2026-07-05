@@ -1,0 +1,10 @@
+supplier_code,name,country,contact_email,active
+SUP-001,Vortex Metals,US,sales@vortexmeta.example,1
+SUP-002,VORTEX METALS,US,sales@vortexmeta.example,1
+SUP-003,Vortex Metals Inc.,US,sales@vortexmeta.example,1
+SUP-004,Cascade Fasteners,US,sales@cascadefas.example,0
+SUP-005,Cascade Fasteners LLC,US,sales@cascadefas.example,0
+SUP-006,Nord Precision,DE,sales@nordprecis.example,1
+SUP-007,Kanto Seiki,JP,sales@kantoseiki.example,1
+SUP-008,Ironline Supply,CA,sales@ironlinesu.example,1
+SUP-009,Meridian Stock,US,sales@meridianst.example,1

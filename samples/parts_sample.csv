@@ -1,0 +1,91 @@
+part_number,name,category,uom,status
+2019-PN-1,Flat Washer,Fasteners,BOX,prototype
+PN-0002,Thrust Washer,Bearings,FT,active
+PN-0003,"Stainless steel compression spring, 1in ID",Springs,LB,obsolete
+PN-0004,"Stainless steel tee fitting, 1in ID",Fittings,FT,active
+PN-0005,Torsion Spring,Springs,FT,active
+PN-0006,Oil Seal,Seals,EA,prototype
+PN-0007,Lock Nut,Fasteners,PK,prototype
+2019-PN-8,Oil Seal,Seals,EA,active
+2019-PN-9,"Stainless steel o-ring, 2in stroke",Seals,PK,obsolete
+2019-PN-10,"Zinc-plated o-ring, 50mm OD",Seals,EA,superseded
+2019-PN-11,Hose Barb,Fittings,FT,obsolete
+PN-0012,"Aluminum thrust washer, 50mm OD",Bearings,EA,active
+2019-PN-13,Gasket,Seals,BOX,superseded
+P14,"Carbon steel o-ring, 2in stroke",Seals,BOX,active
+PN-0015,"Aluminum thrust washer, 2in stroke",Bearings,LB,obsolete
+PN-0016,"Stainless steel extension spring, 25mm bore",Springs,BOX,prototype
+PN-0017,"Carbon steel bearing race, 2in stroke",Bearings,LB,obsolete
+PN-0018,"Stainless steel elbow fitting, 50mm OD",Fittings,PK,active
+PN-0019,Torsion Spring,Springs,PK,superseded
+2019-PN-20,"Brass elbow fitting, 1in ID",Fittings,BOX,active
+2019-PN-21,"Nylon hose barb, 50mm OD",Fittings,FT,active
+PN-0022,Gasket,Seals,BOX,superseded
+P23,"Nylon lock nut, M8 thread, 20mm length",Fasteners,FT,superseded
+PN-0024,"Zinc-plated hose barb, 1in ID",Fittings,PK,obsolete
+P25,"Nylon bearing race, 2in stroke",Bearings,EA,active
+PN-0026,"Zinc-plated o-ring, 1in ID",Seals,EA,active
+2019-PN-27,Socket Cap Screw,Fasteners,EA,active
+PN-0028,"Zinc-plated torsion spring, 1in ID",Springs,LB,superseded
+PN-0029,Angle Bracket,Brackets,EA,prototype
+PN-0030,"Aluminum angle bracket, 25mm bore",Brackets,EA,active
+PN-0031,O-Ring,Seals,BOX,superseded
+PN-0032,Mounting Bracket,Brackets,BOX,active
+PN-0033,Elbow Fitting,Fittings,LB,active
+P34,"Carbon steel compression spring, 1in ID",Springs,FT,active
+PN-0035,Lock Nut,Fasteners,FT,active
+PN-0036,"Carbon steel thrust washer, 1in ID",Bearings,BOX,active
+PN-0037,"Stainless steel cotter pin, 1/4-20 thread, 12mm length",Fasteners,EA,superseded
+PN-0038,Elbow Fitting,Fittings,LB,active
+P39,Cotter Pin,Fasteners,BOX,obsolete
+PN-0040,"Stainless steel elbow fitting, 25mm bore",Fittings,FT,prototype
+PN-0041,"Zinc-plated tee fitting, 50mm OD",Fittings,BOX,active
+PN-0042,Thrust Washer,Bearings,PK,active
+PN-0043,"Stainless steel hose barb, 1in ID",Fittings,LB,active
+PN-0044,"Brass o-ring, 50mm OD",Seals,BOX,obsolete
+2019-PN-45,"Aluminum bearing race, 25mm bore",Bearings,LB,active
+P46,Socket Cap Screw,Fasteners,EA,prototype
+PN-0047,"Aluminum gasket, 50mm OD",Seals,BOX,prototype
+2019-PN-48,"Stainless steel oil seal, 25mm bore",Seals,FT,active
+PN-0049,"Brass o-ring, 1in ID",Seals,FT,superseded
+2019-PN-50,Elbow Fitting,Fittings,BOX,superseded
+PN-0051,"Carbon steel oil seal, 1in ID",Seals,EA,active
+PN-0052,Flat Washer,Fasteners,BOX,prototype
+PN-0053,"Aluminum tee fitting, 1in ID",Fittings,BOX,active
+P54,Torsion Spring,Springs,PK,obsolete
+2019-PN-55,Ball Bearing,Bearings,EA,obsolete
+P56,Mounting Bracket,Brackets,FT,active
+PN-0057,Compression Spring,Springs,BOX,obsolete
+PN-0058,"Nylon flat washer, 3/8-16 thread, 3in length",Fasteners,PK,active
+PN-0059,"Brass o-ring, 25mm bore",Seals,EA,superseded
+PN-0060,"Nylon bearing race, 25mm bore",Bearings,FT,superseded
+PN-0061,Lock Nut,Fasteners,LB,prototype
+2019-PN-62,"Brass thrust washer, 2in stroke",Bearings,EA,prototype
+P63,"Stainless steel tee fitting, 50mm OD",Fittings,LB,active
+2019-PN-64,"Nylon gasket, 1in ID",Seals,BOX,obsolete
+2019-PN-65,"Zinc-plated shelf bracket, 50mm OD",Brackets,FT,superseded
+2019-PN-66,Gasket,Seals,LB,superseded
+2019-PN-67,"Zinc-plated angle bracket, 2in stroke",Brackets,BOX,prototype
+PN-0068,"Brass hose barb, 25mm bore",Fittings,BOX,prototype
+PN-0069,Compression Spring,Springs,BOX,obsolete
+2019-PN-70,"Aluminum lock nut, 1/2-13 thread, 20mm length",Fasteners,FT,obsolete
+PN-0071,"Stainless steel extension spring, 2in stroke",Springs,BOX,active
+2019-PN-72,"Nylon thrust washer, 1in ID",Bearings,EA,obsolete
+PN-0073,"Nylon shelf bracket, 50mm OD",Brackets,FT,superseded
+2019-PN-74,"Nylon tee fitting, 2in stroke",Fittings,BOX,prototype
+P75,"Aluminum angle bracket, 50mm OD",Brackets,LB,obsolete
+2019-PN-76,Gasket,Seals,PK,active
+PN-0077,Oil Seal,Seals,BOX,active
+PN-0078,Extension Spring,Springs,FT,obsolete
+PN-0079,Angle Bracket,Brackets,FT,obsolete
+P80,Hose Barb,Fittings,LB,obsolete
+PN-0081,"Carbon steel gasket, 1in ID",Seals,FT,active
+PN-0082,"Aluminum mounting bracket, 2in stroke",Brackets,BOX,obsolete
+P83,Hose Barb,Fittings,FT,superseded
+PN-0084,"Zinc-plated hex bolt, 3/8-16 thread, 20mm length",Fasteners,EA,active
+PN-0085,Torsion Spring,Springs,FT,active
+2019-PN-86,"Carbon steel angle bracket, 25mm bore",Brackets,LB,active
+P87,"Aluminum o-ring, 25mm bore",Seals,EA,active
+PN-0088,Cotter Pin,Fasteners,BOX,obsolete
+2019-PN-89,"Brass elbow fitting, 50mm OD",Fittings,BOX,superseded
+2019-PN-90,Thrust Washer,Bearings,BOX,active
