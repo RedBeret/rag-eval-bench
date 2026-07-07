@@ -1,0 +1,9 @@
+{
+  "n_questions": 30,
+  "model": "gemma4:e4b",
+  "errors": 0,
+  "avg_faithfulness_score": 0.7,
+  "min_faithfulness_score": 0.0,
+  "max_faithfulness_score": 1.0,
+  "sec_per_answer_avg": 6.08
+}

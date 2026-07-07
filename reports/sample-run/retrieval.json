@@ -1,0 +1,32 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "by_chunk_size": {
+    "128": {
+      "n_questions": 150,
+      "hit_at_1": 0.46,
+      "hit_at_3": 0.6,
+      "hit_at_5": 0.68,
+      "mrr": 0.5367,
+      "chunks": 100,
+      "query_ms_avg": 10.2
+    },
+    "256": {
+      "n_questions": 150,
+      "hit_at_1": 0.4733,
+      "hit_at_3": 0.6267,
+      "hit_at_5": 0.7267,
+      "mrr": 0.5632,
+      "chunks": 90,
+      "query_ms_avg": 9.9
+    },
+    "512": {
+      "n_questions": 150,
+      "hit_at_1": 0.4733,
+      "hit_at_3": 0.6267,
+      "hit_at_5": 0.7267,
+      "mrr": 0.5632,
+      "chunks": 90,
+      "query_ms_avg": 10.6
+    }
+  }
+}

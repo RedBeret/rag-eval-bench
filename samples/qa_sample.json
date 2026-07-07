@@ -1,0 +1,1652 @@
+[
+  {
+    "qa_id": "qa_0000_1",
+    "question": "What category does part PN-0082 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:PN-0082",
+    "source_text": "Part number PN-0082 is a Aluminum mounting bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0000_2",
+    "question": "What is the status of part PN-0082?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0082",
+    "source_text": "Part number PN-0082 is a Aluminum mounting bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0001_1",
+    "question": "What category does part PN-0015 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:PN-0015",
+    "source_text": "Part number PN-0015 is a Aluminum thrust washer, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0001_2",
+    "question": "What is the status of part PN-0015?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0015",
+    "source_text": "Part number PN-0015 is a Aluminum thrust washer, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0002_1",
+    "question": "What category does part PN-0004 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0004",
+    "source_text": "Part number PN-0004 is a Stainless steel tee fitting, 1in ID in the Fittings category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0002_2",
+    "question": "What is the status of part PN-0004?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0004",
+    "source_text": "Part number PN-0004 is a Stainless steel tee fitting, 1in ID in the Fittings category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0003_1",
+    "question": "What category does part PN-0036 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:PN-0036",
+    "source_text": "Part number PN-0036 is a Carbon steel thrust washer, 1in ID in the Bearings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0003_2",
+    "question": "What is the status of part PN-0036?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0036",
+    "source_text": "Part number PN-0036 is a Carbon steel thrust washer, 1in ID in the Bearings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0004_1",
+    "question": "What category does part PN-0032 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:PN-0032",
+    "source_text": "Part number PN-0032 is a Mounting Bracket in the Brackets category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0004_2",
+    "question": "What is the status of part PN-0032?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0032",
+    "source_text": "Part number PN-0032 is a Mounting Bracket in the Brackets category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0005_1",
+    "question": "What category does part PN-0029 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:PN-0029",
+    "source_text": "Part number PN-0029 is a Angle Bracket in the Brackets category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0005_2",
+    "question": "What is the status of part PN-0029?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0029",
+    "source_text": "Part number PN-0029 is a Angle Bracket in the Brackets category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0006_1",
+    "question": "What category does part PN-0018 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0018",
+    "source_text": "Part number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0006_2",
+    "question": "What is the status of part PN-0018?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0018",
+    "source_text": "Part number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0007_1",
+    "question": "What category does part P14 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:P14",
+    "source_text": "Part number P14 is a Carbon steel o-ring, 2in stroke in the Seals category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0007_2",
+    "question": "What is the status of part P14?",
+    "answer": "active",
+    "source_doc_id": "part:P14",
+    "source_text": "Part number P14 is a Carbon steel o-ring, 2in stroke in the Seals category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0008_1",
+    "question": "What category does part 2019-PN-70 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:2019-PN-70",
+    "source_text": "Part number 2019-PN-70 is a Aluminum lock nut, 1/2-13 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0008_2",
+    "question": "What is the status of part 2019-PN-70?",
+    "answer": "obsolete",
+    "source_doc_id": "part:2019-PN-70",
+    "source_text": "Part number 2019-PN-70 is a Aluminum lock nut, 1/2-13 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0009_1",
+    "question": "What category does part PN-0012 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:PN-0012",
+    "source_text": "Part number PN-0012 is a Aluminum thrust washer, 50mm OD in the Bearings category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0009_2",
+    "question": "What is the status of part PN-0012?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0012",
+    "source_text": "Part number PN-0012 is a Aluminum thrust washer, 50mm OD in the Bearings category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0010_1",
+    "question": "What category does part 2019-PN-76 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-76",
+    "source_text": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0010_2",
+    "question": "What is the status of part 2019-PN-76?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-76",
+    "source_text": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0011_1",
+    "question": "What category does part 2019-PN-55 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:2019-PN-55",
+    "source_text": "Part number 2019-PN-55 is a Ball Bearing in the Bearings category. Unit of measure: EA. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0011_2",
+    "question": "What is the status of part 2019-PN-55?",
+    "answer": "obsolete",
+    "source_doc_id": "part:2019-PN-55",
+    "source_text": "Part number 2019-PN-55 is a Ball Bearing in the Bearings category. Unit of measure: EA. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0012_1",
+    "question": "What category does part PN-0005 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0005",
+    "source_text": "Part number PN-0005 is a Torsion Spring in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0012_2",
+    "question": "What is the status of part PN-0005?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0005",
+    "source_text": "Part number PN-0005 is a Torsion Spring in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0013_1",
+    "question": "What category does part PN-0088 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0088",
+    "source_text": "Part number PN-0088 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0013_2",
+    "question": "What is the status of part PN-0088?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0088",
+    "source_text": "Part number PN-0088 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0014_1",
+    "question": "What category does part PN-0081 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0081",
+    "source_text": "Part number PN-0081 is a Carbon steel gasket, 1in ID in the Seals category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0014_2",
+    "question": "What is the status of part PN-0081?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0081",
+    "source_text": "Part number PN-0081 is a Carbon steel gasket, 1in ID in the Seals category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0015_1",
+    "question": "What category does part PN-0028 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0028",
+    "source_text": "Part number PN-0028 is a Zinc-plated torsion spring, 1in ID in the Springs category. Unit of measure: LB. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0015_2",
+    "question": "What is the status of part PN-0028?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0028",
+    "source_text": "Part number PN-0028 is a Zinc-plated torsion spring, 1in ID in the Springs category. Unit of measure: LB. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0016_1",
+    "question": "What category does part PN-0030 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:PN-0030",
+    "source_text": "Part number PN-0030 is a Aluminum angle bracket, 25mm bore in the Brackets category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0016_2",
+    "question": "What is the status of part PN-0030?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0030",
+    "source_text": "Part number PN-0030 is a Aluminum angle bracket, 25mm bore in the Brackets category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0017_1",
+    "question": "What category does part 2019-PN-65 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:2019-PN-65",
+    "source_text": "Part number 2019-PN-65 is a Zinc-plated shelf bracket, 50mm OD in the Brackets category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0017_2",
+    "question": "What is the status of part 2019-PN-65?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-65",
+    "source_text": "Part number 2019-PN-65 is a Zinc-plated shelf bracket, 50mm OD in the Brackets category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0018_1",
+    "question": "What category does part PN-0077 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0077",
+    "source_text": "Part number PN-0077 is a Oil Seal in the Seals category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0018_2",
+    "question": "What is the status of part PN-0077?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0077",
+    "source_text": "Part number PN-0077 is a Oil Seal in the Seals category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0019_1",
+    "question": "What category does part PN-0026 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0026",
+    "source_text": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0019_2",
+    "question": "What is the status of part PN-0026?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0026",
+    "source_text": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0020_1",
+    "question": "What category does part 2019-PN-90 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:2019-PN-90",
+    "source_text": "Part number 2019-PN-90 is a Thrust Washer in the Bearings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0020_2",
+    "question": "What is the status of part 2019-PN-90?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-90",
+    "source_text": "Part number 2019-PN-90 is a Thrust Washer in the Bearings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0021_1",
+    "question": "What category does part P54 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:P54",
+    "source_text": "Part number P54 is a Torsion Spring in the Springs category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0021_2",
+    "question": "What is the status of part P54?",
+    "answer": "obsolete",
+    "source_doc_id": "part:P54",
+    "source_text": "Part number P54 is a Torsion Spring in the Springs category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0022_1",
+    "question": "What category does part PN-0085 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0085",
+    "source_text": "Part number PN-0085 is a Torsion Spring in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0022_2",
+    "question": "What is the status of part PN-0085?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0085",
+    "source_text": "Part number PN-0085 is a Torsion Spring in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0023_1",
+    "question": "What category does part PN-0058 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0058",
+    "source_text": "Part number PN-0058 is a Nylon flat washer, 3/8-16 thread, 3in length in the Fasteners category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0023_2",
+    "question": "What is the status of part PN-0058?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0058",
+    "source_text": "Part number PN-0058 is a Nylon flat washer, 3/8-16 thread, 3in length in the Fasteners category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0024_1",
+    "question": "What category does part P87 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:P87",
+    "source_text": "Part number P87 is a Aluminum o-ring, 25mm bore in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0024_2",
+    "question": "What is the status of part P87?",
+    "answer": "active",
+    "source_doc_id": "part:P87",
+    "source_text": "Part number P87 is a Aluminum o-ring, 25mm bore in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0025_1",
+    "question": "What category does part 2019-PN-1 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:2019-PN-1",
+    "source_text": "Part number 2019-PN-1 is a Flat Washer in the Fasteners category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0025_2",
+    "question": "What is the status of part 2019-PN-1?",
+    "answer": "prototype",
+    "source_doc_id": "part:2019-PN-1",
+    "source_text": "Part number 2019-PN-1 is a Flat Washer in the Fasteners category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0026_1",
+    "question": "What category does part 2019-PN-21 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:2019-PN-21",
+    "source_text": "Part number 2019-PN-21 is a Nylon hose barb, 50mm OD in the Fittings category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0026_2",
+    "question": "What is the status of part 2019-PN-21?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-21",
+    "source_text": "Part number 2019-PN-21 is a Nylon hose barb, 50mm OD in the Fittings category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0027_1",
+    "question": "What category does part 2019-PN-45 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:2019-PN-45",
+    "source_text": "Part number 2019-PN-45 is a Aluminum bearing race, 25mm bore in the Bearings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0027_2",
+    "question": "What is the status of part 2019-PN-45?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-45",
+    "source_text": "Part number 2019-PN-45 is a Aluminum bearing race, 25mm bore in the Bearings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0028_1",
+    "question": "What category does part P75 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:P75",
+    "source_text": "Part number P75 is a Aluminum angle bracket, 50mm OD in the Brackets category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0028_2",
+    "question": "What is the status of part P75?",
+    "answer": "obsolete",
+    "source_doc_id": "part:P75",
+    "source_text": "Part number P75 is a Aluminum angle bracket, 50mm OD in the Brackets category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0029_1",
+    "question": "What category does part PN-0022 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0022",
+    "source_text": "Part number PN-0022 is a Gasket in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0029_2",
+    "question": "What is the status of part PN-0022?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0022",
+    "source_text": "Part number PN-0022 is a Gasket in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0030_1",
+    "question": "What category does part PN-0084 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0084",
+    "source_text": "Part number PN-0084 is a Zinc-plated hex bolt, 3/8-16 thread, 20mm length in the Fasteners category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0030_2",
+    "question": "What is the status of part PN-0084?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0084",
+    "source_text": "Part number PN-0084 is a Zinc-plated hex bolt, 3/8-16 thread, 20mm length in the Fasteners category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0031_1",
+    "question": "What category does part 2019-PN-10 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-10",
+    "source_text": "Part number 2019-PN-10 is a Zinc-plated o-ring, 50mm OD in the Seals category. Unit of measure: EA. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0031_2",
+    "question": "What is the status of part 2019-PN-10?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-10",
+    "source_text": "Part number 2019-PN-10 is a Zinc-plated o-ring, 50mm OD in the Seals category. Unit of measure: EA. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0032_1",
+    "question": "What category does part P83 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:P83",
+    "source_text": "Part number P83 is a Hose Barb in the Fittings category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0032_2",
+    "question": "What is the status of part P83?",
+    "answer": "superseded",
+    "source_doc_id": "part:P83",
+    "source_text": "Part number P83 is a Hose Barb in the Fittings category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0033_1",
+    "question": "What category does part PN-0049 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0049",
+    "source_text": "Part number PN-0049 is a Brass o-ring, 1in ID in the Seals category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0033_2",
+    "question": "What is the status of part PN-0049?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0049",
+    "source_text": "Part number PN-0049 is a Brass o-ring, 1in ID in the Seals category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0034_1",
+    "question": "What category does part PN-0061 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0061",
+    "source_text": "Part number PN-0061 is a Lock Nut in the Fasteners category. Unit of measure: LB. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0034_2",
+    "question": "What is the status of part PN-0061?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0061",
+    "source_text": "Part number PN-0061 is a Lock Nut in the Fasteners category. Unit of measure: LB. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0035_1",
+    "question": "What category does part PN-0007 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0007",
+    "source_text": "Part number PN-0007 is a Lock Nut in the Fasteners category. Unit of measure: PK. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0035_2",
+    "question": "What is the status of part PN-0007?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0007",
+    "source_text": "Part number PN-0007 is a Lock Nut in the Fasteners category. Unit of measure: PK. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0036_1",
+    "question": "What category does part PN-0006 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0006",
+    "source_text": "Part number PN-0006 is a Oil Seal in the Seals category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0036_2",
+    "question": "What is the status of part PN-0006?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0006",
+    "source_text": "Part number PN-0006 is a Oil Seal in the Seals category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0037_1",
+    "question": "What category does part P25 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:P25",
+    "source_text": "Part number P25 is a Nylon bearing race, 2in stroke in the Bearings category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0037_2",
+    "question": "What is the status of part P25?",
+    "answer": "active",
+    "source_doc_id": "part:P25",
+    "source_text": "Part number P25 is a Nylon bearing race, 2in stroke in the Bearings category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0038_1",
+    "question": "What category does part PN-0079 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:PN-0079",
+    "source_text": "Part number PN-0079 is a Angle Bracket in the Brackets category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0038_2",
+    "question": "What is the status of part PN-0079?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0079",
+    "source_text": "Part number PN-0079 is a Angle Bracket in the Brackets category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0039_1",
+    "question": "What category does part P23 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:P23",
+    "source_text": "Part number P23 is a Nylon lock nut, M8 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0039_2",
+    "question": "What is the status of part P23?",
+    "answer": "superseded",
+    "source_doc_id": "part:P23",
+    "source_text": "Part number P23 is a Nylon lock nut, M8 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0040_1",
+    "question": "What category does part PN-0051 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0051",
+    "source_text": "Part number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0040_2",
+    "question": "What is the status of part PN-0051?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0051",
+    "source_text": "Part number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0041_1",
+    "question": "What category does part P39 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:P39",
+    "source_text": "Part number P39 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0041_2",
+    "question": "What is the status of part P39?",
+    "answer": "obsolete",
+    "source_doc_id": "part:P39",
+    "source_text": "Part number P39 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0042_1",
+    "question": "What category does part PN-0017 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:PN-0017",
+    "source_text": "Part number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0042_2",
+    "question": "What is the status of part PN-0017?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0017",
+    "source_text": "Part number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0043_1",
+    "question": "What category does part PN-0003 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0003",
+    "source_text": "Part number PN-0003 is a Stainless steel compression spring, 1in ID in the Springs category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0043_2",
+    "question": "What is the status of part PN-0003?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0003",
+    "source_text": "Part number PN-0003 is a Stainless steel compression spring, 1in ID in the Springs category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0044_1",
+    "question": "What category does part 2019-PN-74 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:2019-PN-74",
+    "source_text": "Part number 2019-PN-74 is a Nylon tee fitting, 2in stroke in the Fittings category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0044_2",
+    "question": "What is the status of part 2019-PN-74?",
+    "answer": "prototype",
+    "source_doc_id": "part:2019-PN-74",
+    "source_text": "Part number 2019-PN-74 is a Nylon tee fitting, 2in stroke in the Fittings category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0045_1",
+    "question": "What category does part PN-0035 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0035",
+    "source_text": "Part number PN-0035 is a Lock Nut in the Fasteners category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0045_2",
+    "question": "What is the status of part PN-0035?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0035",
+    "source_text": "Part number PN-0035 is a Lock Nut in the Fasteners category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0046_1",
+    "question": "What category does part 2019-PN-8 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-8",
+    "source_text": "Part number 2019-PN-8 is a Oil Seal in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0046_2",
+    "question": "What is the status of part 2019-PN-8?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-8",
+    "source_text": "Part number 2019-PN-8 is a Oil Seal in the Seals category. Unit of measure: EA. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0047_1",
+    "question": "What category does part PN-0053 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0053",
+    "source_text": "Part number PN-0053 is a Aluminum tee fitting, 1in ID in the Fittings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0047_2",
+    "question": "What is the status of part PN-0053?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0053",
+    "source_text": "Part number PN-0053 is a Aluminum tee fitting, 1in ID in the Fittings category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0048_1",
+    "question": "What category does part PN-0069 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0069",
+    "source_text": "Part number PN-0069 is a Compression Spring in the Springs category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0048_2",
+    "question": "What is the status of part PN-0069?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0069",
+    "source_text": "Part number PN-0069 is a Compression Spring in the Springs category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0049_1",
+    "question": "What category does part 2019-PN-66 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-66",
+    "source_text": "Part number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0049_2",
+    "question": "What is the status of part 2019-PN-66?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-66",
+    "source_text": "Part number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0050_1",
+    "question": "What category does part PN-0019 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0019",
+    "source_text": "Part number PN-0019 is a Torsion Spring in the Springs category. Unit of measure: PK. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0050_2",
+    "question": "What is the status of part PN-0019?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0019",
+    "source_text": "Part number PN-0019 is a Torsion Spring in the Springs category. Unit of measure: PK. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0051_1",
+    "question": "What category does part PN-0024 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0024",
+    "source_text": "Part number PN-0024 is a Zinc-plated hose barb, 1in ID in the Fittings category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0051_2",
+    "question": "What is the status of part PN-0024?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0024",
+    "source_text": "Part number PN-0024 is a Zinc-plated hose barb, 1in ID in the Fittings category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0052_1",
+    "question": "What category does part PN-0037 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0037",
+    "source_text": "Part number PN-0037 is a Stainless steel cotter pin, 1/4-20 thread, 12mm length in the Fasteners category. Unit of measure: EA. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0052_2",
+    "question": "What is the status of part PN-0037?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0037",
+    "source_text": "Part number PN-0037 is a Stainless steel cotter pin, 1/4-20 thread, 12mm length in the Fasteners category. Unit of measure: EA. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0053_1",
+    "question": "What category does part 2019-PN-13 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-13",
+    "source_text": "Part number 2019-PN-13 is a Gasket in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0053_2",
+    "question": "What is the status of part 2019-PN-13?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-13",
+    "source_text": "Part number 2019-PN-13 is a Gasket in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0054_1",
+    "question": "What category does part PN-0078 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0078",
+    "source_text": "Part number PN-0078 is a Extension Spring in the Springs category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0054_2",
+    "question": "What is the status of part PN-0078?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0078",
+    "source_text": "Part number PN-0078 is a Extension Spring in the Springs category. Unit of measure: FT. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0055_1",
+    "question": "What category does part PN-0047 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0047",
+    "source_text": "Part number PN-0047 is a Aluminum gasket, 50mm OD in the Seals category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0055_2",
+    "question": "What is the status of part PN-0047?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0047",
+    "source_text": "Part number PN-0047 is a Aluminum gasket, 50mm OD in the Seals category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0056_1",
+    "question": "What category does part 2019-PN-89 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:2019-PN-89",
+    "source_text": "Part number 2019-PN-89 is a Brass elbow fitting, 50mm OD in the Fittings category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0056_2",
+    "question": "What is the status of part 2019-PN-89?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-89",
+    "source_text": "Part number 2019-PN-89 is a Brass elbow fitting, 50mm OD in the Fittings category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0057_1",
+    "question": "What category does part PN-0040 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0040",
+    "source_text": "Part number PN-0040 is a Stainless steel elbow fitting, 25mm bore in the Fittings category. Unit of measure: FT. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0057_2",
+    "question": "What is the status of part PN-0040?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0040",
+    "source_text": "Part number PN-0040 is a Stainless steel elbow fitting, 25mm bore in the Fittings category. Unit of measure: FT. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0058_1",
+    "question": "What category does part PN-0042 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:PN-0042",
+    "source_text": "Part number PN-0042 is a Thrust Washer in the Bearings category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0058_2",
+    "question": "What is the status of part PN-0042?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0042",
+    "source_text": "Part number PN-0042 is a Thrust Washer in the Bearings category. Unit of measure: PK. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0059_1",
+    "question": "What category does part 2019-PN-62 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:2019-PN-62",
+    "source_text": "Part number 2019-PN-62 is a Brass thrust washer, 2in stroke in the Bearings category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0059_2",
+    "question": "What is the status of part 2019-PN-62?",
+    "answer": "prototype",
+    "source_doc_id": "part:2019-PN-62",
+    "source_text": "Part number 2019-PN-62 is a Brass thrust washer, 2in stroke in the Bearings category. Unit of measure: EA. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0060_1",
+    "question": "What category does part PN-0044 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0044",
+    "source_text": "Part number PN-0044 is a Brass o-ring, 50mm OD in the Seals category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0060_2",
+    "question": "What is the status of part PN-0044?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0044",
+    "source_text": "Part number PN-0044 is a Brass o-ring, 50mm OD in the Seals category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0061_1",
+    "question": "What category does part PN-0031 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:PN-0031",
+    "source_text": "Part number PN-0031 is a O-Ring in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0061_2",
+    "question": "What is the status of part PN-0031?",
+    "answer": "superseded",
+    "source_doc_id": "part:PN-0031",
+    "source_text": "Part number PN-0031 is a O-Ring in the Seals category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0062_1",
+    "question": "What category does part 2019-PN-72 belong to?",
+    "answer": "Bearings",
+    "source_doc_id": "part:2019-PN-72",
+    "source_text": "Part number 2019-PN-72 is a Nylon thrust washer, 1in ID in the Bearings category. Unit of measure: EA. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0062_2",
+    "question": "What is the status of part 2019-PN-72?",
+    "answer": "obsolete",
+    "source_doc_id": "part:2019-PN-72",
+    "source_text": "Part number 2019-PN-72 is a Nylon thrust washer, 1in ID in the Bearings category. Unit of measure: EA. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0063_1",
+    "question": "What category does part PN-0038 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:PN-0038",
+    "source_text": "Part number PN-0038 is a Elbow Fitting in the Fittings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0063_2",
+    "question": "What is the status of part PN-0038?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0038",
+    "source_text": "Part number PN-0038 is a Elbow Fitting in the Fittings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0064_1",
+    "question": "What category does part 2019-PN-9 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-9",
+    "source_text": "Part number 2019-PN-9 is a Stainless steel o-ring, 2in stroke in the Seals category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0064_2",
+    "question": "What is the status of part 2019-PN-9?",
+    "answer": "obsolete",
+    "source_doc_id": "part:2019-PN-9",
+    "source_text": "Part number 2019-PN-9 is a Stainless steel o-ring, 2in stroke in the Seals category. Unit of measure: PK. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0065_1",
+    "question": "What category does part P34 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:P34",
+    "source_text": "Part number P34 is a Carbon steel compression spring, 1in ID in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0065_2",
+    "question": "What is the status of part P34?",
+    "answer": "active",
+    "source_doc_id": "part:P34",
+    "source_text": "Part number P34 is a Carbon steel compression spring, 1in ID in the Springs category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0066_1",
+    "question": "What category does part 2019-PN-64 belong to?",
+    "answer": "Seals",
+    "source_doc_id": "part:2019-PN-64",
+    "source_text": "Part number 2019-PN-64 is a Nylon gasket, 1in ID in the Seals category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0066_2",
+    "question": "What is the status of part 2019-PN-64?",
+    "answer": "obsolete",
+    "source_doc_id": "part:2019-PN-64",
+    "source_text": "Part number 2019-PN-64 is a Nylon gasket, 1in ID in the Seals category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0067_1",
+    "question": "What category does part P80 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:P80",
+    "source_text": "Part number P80 is a Hose Barb in the Fittings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0067_2",
+    "question": "What is the status of part P80?",
+    "answer": "obsolete",
+    "source_doc_id": "part:P80",
+    "source_text": "Part number P80 is a Hose Barb in the Fittings category. Unit of measure: LB. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0068_1",
+    "question": "What category does part 2019-PN-86 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:2019-PN-86",
+    "source_text": "Part number 2019-PN-86 is a Carbon steel angle bracket, 25mm bore in the Brackets category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0068_2",
+    "question": "What is the status of part 2019-PN-86?",
+    "answer": "active",
+    "source_doc_id": "part:2019-PN-86",
+    "source_text": "Part number 2019-PN-86 is a Carbon steel angle bracket, 25mm bore in the Brackets category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0069_1",
+    "question": "What category does part 2019-PN-50 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:2019-PN-50",
+    "source_text": "Part number 2019-PN-50 is a Elbow Fitting in the Fittings category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0069_2",
+    "question": "What is the status of part 2019-PN-50?",
+    "answer": "superseded",
+    "source_doc_id": "part:2019-PN-50",
+    "source_text": "Part number 2019-PN-50 is a Elbow Fitting in the Fittings category. Unit of measure: BOX. Status: superseded.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0070_1",
+    "question": "What category does part PN-0057 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0057",
+    "source_text": "Part number PN-0057 is a Compression Spring in the Springs category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0070_2",
+    "question": "What is the status of part PN-0057?",
+    "answer": "obsolete",
+    "source_doc_id": "part:PN-0057",
+    "source_text": "Part number PN-0057 is a Compression Spring in the Springs category. Unit of measure: BOX. Status: obsolete.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0071_1",
+    "question": "What category does part PN-0052 belong to?",
+    "answer": "Fasteners",
+    "source_doc_id": "part:PN-0052",
+    "source_text": "Part number PN-0052 is a Flat Washer in the Fasteners category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0071_2",
+    "question": "What is the status of part PN-0052?",
+    "answer": "prototype",
+    "source_doc_id": "part:PN-0052",
+    "source_text": "Part number PN-0052 is a Flat Washer in the Fasteners category. Unit of measure: BOX. Status: prototype.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0072_1",
+    "question": "What category does part PN-0071 belong to?",
+    "answer": "Springs",
+    "source_doc_id": "part:PN-0071",
+    "source_text": "Part number PN-0071 is a Stainless steel extension spring, 2in stroke in the Springs category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0072_2",
+    "question": "What is the status of part PN-0071?",
+    "answer": "active",
+    "source_doc_id": "part:PN-0071",
+    "source_text": "Part number PN-0071 is a Stainless steel extension spring, 2in stroke in the Springs category. Unit of measure: BOX. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0073_1",
+    "question": "What category does part P63 belong to?",
+    "answer": "Fittings",
+    "source_doc_id": "part:P63",
+    "source_text": "Part number P63 is a Stainless steel tee fitting, 50mm OD in the Fittings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0073_2",
+    "question": "What is the status of part P63?",
+    "answer": "active",
+    "source_doc_id": "part:P63",
+    "source_text": "Part number P63 is a Stainless steel tee fitting, 50mm OD in the Fittings category. Unit of measure: LB. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_0074_1",
+    "question": "What category does part P56 belong to?",
+    "answer": "Brackets",
+    "source_doc_id": "part:P56",
+    "source_text": "Part number P56 is a Mounting Bracket in the Brackets category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_0074_2",
+    "question": "What is the status of part P56?",
+    "answer": "active",
+    "source_doc_id": "part:P56",
+    "source_text": "Part number P56 is a Mounting Bracket in the Brackets category. Unit of measure: FT. Status: active.",
+    "metadata": {
+      "doc_type": "part",
+      "template_index": 2
+    }
+  }
+]
