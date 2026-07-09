@@ -15,6 +15,8 @@ anything else.
 > **All data is synthetic.** Part numbers, supplier names, and descriptions are
 > fabricated. Meridian Fabrication Co. is not a real company.
 
+<p align="center"><img src="demo/demo.gif" alt="rag-eval-bench measuring a RAG config on synthetic data" width="820"></p>
+
 ## Quick start
 
 ```bash
@@ -54,8 +56,10 @@ score identically; 128 fragments the longer descriptions and scatters the signal
 chunks. "Smaller chunks = better retrieval" is not a law — it depends on your documents,
 which is the whole reason to measure it.
 
-Generation with `gemma4:e4b` over 30 questions (top-3 chunks as context): faithfulness
-0.70 (keyword-overlap proxy), 0 errors, ~6.1 s/answer on an M-series laptop. See
+Generation with `gpt-oss:20b`, run over a LAN Ollama box, on 30 questions (top-3 chunks
+as context): faithfulness **0.85** (keyword-overlap proxy), 1 dropped answer, ~4.5
+s/answer. The smaller `gemma4:e4b` scored 0.70 on the same set — bigger models ground
+answers a bit better, which is the sort of thing this harness exists to show. See
 [Metrics](#metrics) for what that score does and does not mean.
 
 ## How it works
@@ -124,19 +128,41 @@ Then run `rag-eval qa-gen yourdata.csv --out qa.json` and
 `rag-eval retrieval qa.json yourdata.csv`. For anything that isn't a parts/supplier table,
 JSONL is the general path.
 
-## Running on a GPU box
+## Running bigger models
 
-Retrieval only needs CPU. For generation and larger sweeps, use a machine with a real GPU:
+Retrieval only needs CPU. Generation talks to any Ollama endpoint, so there are three
+ways to use a larger model without touching the code:
+
+**1. Local GPU box** — pull a model and run it on the same machine:
 
 ```bash
-make setup
-ollama serve
-ollama pull gemma4:e4b          # or any local model you like
-make sample-generation GEN_MODEL=gemma4:e4b
+ollama pull gpt-oss:20b
+make sample-generation GEN_MODEL=gpt-oss:20b
 ```
 
-Results land in `reports/sample-run/`. The committed run in this repo was produced with
-`gemma4:e4b`; point `GEN_MODEL` at a bigger model and re-run to compare.
+**2. A GPU box over your LAN** — bind Ollama to the network on the GPU machine:
+
+```bash
+OLLAMA_HOST=0.0.0.0 ollama serve
+```
+
+then point the run at it from anywhere on the LAN:
+
+```bash
+make sample-generation GEN_MODEL=gpt-oss:20b OLLAMA_URL=http://<gpu-box-ip>:11434
+```
+
+Keep that endpoint on a trusted network — Ollama has no auth.
+
+**3. Ollama cloud models** — sign in once (`ollama signin`) and use a `-cloud` tag:
+
+```bash
+make sample-generation GEN_MODEL=gpt-oss:120b-cloud
+```
+
+Any other OpenAI-compatible endpoint would need a small adapter in
+`rag/eval/generation.py` — left out on purpose to keep the default path local and
+verifiable. Results land in `reports/sample-run/` and the committed numbers regenerate.
 
 ## What this is, and isn't
 

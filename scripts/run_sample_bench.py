@@ -56,6 +56,11 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--embed-model", default=EMBED_MODEL, help="Embedding model, or 'mock'.")
     ap.add_argument("--model", default=None, help="Ollama model for generation (optional).")
+    ap.add_argument(
+        "--ollama-url",
+        default="http://localhost:11434",
+        help="Ollama base URL (point at a LAN GPU box or Ollama cloud).",
+    )
     ap.add_argument("--gen-n", type=int, default=30, help="Questions to score for generation.")
     args = ap.parse_args()
 
@@ -88,12 +93,16 @@ def main() -> None:
 
     # generation (optional)
     generation = None
-    if args.model and _is_ollama_available():
-        print(f"running generation with {args.model} on {args.gen_n} questions...")
+    if args.model and _is_ollama_available(args.ollama_url):
+        print(
+            f"running generation with {args.model} at {args.ollama_url} on {args.gen_n} questions..."
+        )
         chunks = chunk_corpus(docs, max_chars=512)
         store = build_store(chunks, args.embed_model, name="gen")
         t0 = time.perf_counter()
-        gen_results = evaluate_generation(qa[: args.gen_n], store, model=args.model, k=3)
+        gen_results = evaluate_generation(
+            qa[: args.gen_n], store, model=args.model, base_url=args.ollama_url, k=3
+        )
         gm = compute_generation_metrics(gen_results)
         gm["sec_per_answer_avg"] = round((time.perf_counter() - t0) / max(len(gen_results), 1), 2)
         generation = gm

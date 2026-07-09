@@ -3,6 +3,7 @@
 PYTHON ?= python
 EMBED_MODEL ?= all-MiniLM-L6-v2
 GEN_MODEL ?= gemma3:4b
+OLLAMA_URL ?= http://localhost:11434
 
 setup:
 	$(PYTHON) -m pip install -r requirements.txt -e .
@@ -29,7 +30,8 @@ sample-bench:
 	$(PYTHON) scripts/run_sample_bench.py --embed-model $(EMBED_MODEL)
 
 sample-generation:
-	$(PYTHON) scripts/run_sample_bench.py --embed-model $(EMBED_MODEL) --model $(GEN_MODEL)
+	$(PYTHON) scripts/run_sample_bench.py --embed-model $(EMBED_MODEL) \
+		--model $(GEN_MODEL) --ollama-url $(OLLAMA_URL)
 
 clean:
 	rm -rf .rag-index reports

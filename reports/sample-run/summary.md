@@ -9,16 +9,16 @@ Embedding model: `all-MiniLM-L6-v2`.
 
 | Chunk chars | Passages | Hit@1 | Hit@5 | MRR | Avg query |
 |------------:|---------:|------:|------:|----:|----------:|
-| 128 | 100 | 0.460 | 0.680 | 0.537 | 10.2 ms |
-| 256 | 90 | 0.473 | 0.727 | 0.563 | 9.9 ms |
-| 512 | 90 | 0.473 | 0.727 | 0.563 | 10.6 ms |
+| 128 | 100 | 0.460 | 0.680 | 0.537 | 12.5 ms |
+| 256 | 90 | 0.473 | 0.727 | 0.563 | 9.8 ms |
+| 512 | 90 | 0.473 | 0.727 | 0.563 | 9.6 ms |
 
 Default config (512 chars): Hit@1 0.473, Hit@5 0.727, MRR 0.563.
 
 ## Generation
 
-Model `gemma4:e4b` over 30 questions, top-3 retrieved chunks as context.
+Model `gpt-oss:20b` over 30 questions, top-3 retrieved chunks as context.
 
-- Faithfulness (keyword-overlap proxy): **0.700** (min 0.000, max 1.000)
-- Errors: 0
-- Speed: 6.08 s/answer
+- Faithfulness (keyword-overlap proxy): **0.849** (min 0.375, max 1.000)
+- Errors: 1
+- Speed: 4.53 s/answer

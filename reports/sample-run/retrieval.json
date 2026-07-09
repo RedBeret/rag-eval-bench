@@ -8,7 +8,7 @@
       "hit_at_5": 0.68,
       "mrr": 0.5367,
       "chunks": 100,
-      "query_ms_avg": 10.2
+      "query_ms_avg": 12.5
     },
     "256": {
       "n_questions": 150,
@@ -17,7 +17,7 @@
       "hit_at_5": 0.7267,
       "mrr": 0.5632,
       "chunks": 90,
-      "query_ms_avg": 9.9
+      "query_ms_avg": 9.8
     },
     "512": {
       "n_questions": 150,
@@ -26,7 +26,7 @@
       "hit_at_5": 0.7267,
       "mrr": 0.5632,
       "chunks": 90,
-      "query_ms_avg": 10.6
+      "query_ms_avg": 9.6
     }
   }
 }
