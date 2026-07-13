@@ -21,6 +21,9 @@ rag-eval = "rag.cli:cli"
 [tool.setuptools.packages.find]
 where = ["."]
 
+[tool.setuptools.package-data]
+rag = ["eval/prompts/*.md"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py312"
