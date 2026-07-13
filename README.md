@@ -28,8 +28,11 @@ make setup
 # verify the whole pipeline with no model download (deterministic MockEmbedder)
 make smoke
 
-# real run: embeds the bundled corpus with all-MiniLM-L6-v2 and sweeps chunk sizes
+# real retrieval run: embeds the corpus and sweeps chunk sizes
 make sample-bench
+
+# optional real generation run, including five unanswerable questions
+make sample-generation GEN_MODEL=gemma3:4b
 ```
 
 `make smoke` proves the plumbing works; it does not measure model quality.
@@ -38,17 +41,18 @@ offline. On Windows, `run.bat` sets up the venv for you.
 
 ## Results
 
-Every number below is produced by `scripts/run_sample_bench.py` on the bundled corpus.
-Re-run `make sample-bench` and it regenerates `reports/sample-run/summary.md` — nothing
-here is hand-typed.
+Every number below is copied from a committed machine-readable artifact. Run
+`make sample-bench` for retrieval, `make sample-generation` for generation, and
+`make sample-judge JUDGE_MODEL=phi4:latest` for the separate-model judge.
 
-Corpus: 90 synthetic parts, 150 template questions (seed 42). Embedder `all-MiniLM-L6-v2`.
+Corpus: 90 synthetic parts, 150 answerable template questions plus 5 unanswerable
+questions (seed 42). Embedder `all-MiniLM-L6-v2`.
 
 | Chunk chars | Passages | Hit@1 | Hit@5 | MRR | Avg query |
 |------------:|---------:|------:|------:|----:|----------:|
-| 128 | 100 | 0.460 | 0.680 | 0.537 | 10.2 ms |
-| 256 |  90 | 0.473 | 0.727 | 0.563 |  9.9 ms |
-| 512 |  90 | 0.473 | 0.727 | 0.563 | 10.6 ms |
+| 128 | 100 | 0.460 | 0.680 | 0.537 | 12.0 ms |
+| 256 |  90 | 0.473 | 0.727 | 0.563 | 10.2 ms |
+| 512 |  90 | 0.473 | 0.727 | 0.563 | 10.7 ms |
 
 The mildly interesting result: shrinking chunks to 128 chars made retrieval *worse*
 (Hit@5 0.68 vs 0.73). Most part descriptions are short, so 256 and 512 never split and
@@ -56,11 +60,20 @@ score identically; 128 fragments the longer descriptions and scatters the signal
 chunks. "Smaller chunks = better retrieval" is not a law — it depends on your documents,
 which is the whole reason to measure it.
 
-Generation with `gpt-oss:20b`, run over a LAN Ollama box, on 30 questions (top-3 chunks
-as context): faithfulness **0.85** (keyword-overlap proxy), 1 dropped answer, ~4.5
-s/answer. The smaller `gemma4:e4b` scored 0.70 on the same set — bigger models ground
-answers a bit better, which is the sort of thing this harness exists to show. See
-[Metrics](#metrics) for what that score does and does not mean.
+Generation with local `gemma3:4b` over 30 questions (25 answerable, 5 unanswerable;
+top-3 chunks as context): keyword-overlap faithfulness **0.760**, 0 errors, **1.000**
+correct-refusal rate, **0.240** false-refusal rate, and 1.95 s/answer. The high false
+refusal rate is useful evidence that retrieval misses still matter even when the model
+is instructed not to hallucinate. See the committed
+[`generation.json`](reports/sample-run/generation.json) and answer-level
+[`generation-details.json`](reports/sample-run/generation-details.json).
+
+A separate local `phi4:latest` judge using rubric v1 marked **0.800 correct** and
+**0.800 grounded** with 0 judge errors. That score is committed as raw evidence, but it
+is not yet a validated metric: the seeded 20-row human grade sheet is intentionally
+blank, so agreement and Cohen's kappa remain pending human review.
+The raw verdicts and reasoning are in
+[`judged.json`](reports/sample-run/judged.json).
 
 ## How it works
 
@@ -96,6 +109,17 @@ The Makefile wraps the common paths; underneath it is the `rag-eval` command.
 | `rag-eval retrieval QA CORPUS --k 5` | Hit@1/3/5 and MRR against an index |
 | `rag-eval generation QA CORPUS --model gemma3:4b` | score local Ollama answers |
 | `rag-eval bench CORPUS` | index → qa-gen → retrieve → (generation if Ollama is up) |
+| `rag-eval judge REPORT --judge-model qwen3:8b` | rubric-driven LLM judge over a generation report |
+| `rag-eval agreement grades.csv` | human/judge agreement (raw % + Cohen's kappa) |
+
+`qa-gen --unanswerable N` (and `bench`, 5 by default) adds questions the corpus
+provably cannot answer — refusing correctly is scored, answering them is a
+hallucination.
+
+`make sample-generation` writes both aggregate `generation.json` metrics and an
+answer-level `generation-details.json`. `make sample-judge` consumes the detailed
+artifact. The committed judge run also includes a blinded grade sheet and a separate
+answer key; fill only `human_verdict` before running `rag-eval agreement`.
 
 `--embed-model mock` swaps in the deterministic MockEmbedder (no download);
 `--skip-generation` forces retrieval-only even when Ollama is running. Run any command
@@ -114,7 +138,23 @@ with `--help` for the full option list.
   context. It is a cheap proxy for "is the model grounding its answer in what it
   retrieved," not an entailment/NLI check. A fluent answer that invents facts scores low;
   a terse answer that echoes the context scores high. `QUIRKS.md §8` covers the limits.
+- **Correct-refusal rate** — on questions the corpus provably can't answer, how often
+  the model refuses instead of hallucinating. Its mirror, **false-refusal rate**,
+  counts refusals on answerable questions — a system that refuses everything is
+  useless, not safe.
 - **Errors** — generation calls that failed (model not pulled, timeout, etc.).
+
+**Judge** (needs Ollama, second model):
+
+- `rag-eval judge` grades each answer **correct / partial / incorrect** plus a
+  **grounded** flag, using a rubric versioned in-repo
+  (`rag/eval/prompts/judge_v1.md`) so you can audit what "correct" means before
+  trusting a number. The judge model must differ from the answer model — the tool
+  refuses to let a model grade its own homework.
+- Judge scores can be checked with `--grade-sheet`, which exports a seeded sample with
+  verdicts hidden in a separate companion key. After a human fills the sheet,
+  `rag-eval agreement` reports agreement plus Cohen's kappa. The committed sheet is
+  blank, so the current judge score remains an opinion rather than a validated metric.
 
 ## Bring your own corpus
 
@@ -172,8 +212,9 @@ replacement.
 
 Known limits, all documented in `QUIRKS.md`: the template questions are easy by
 construction (the answer sits in the source row), so retrieval numbers here are optimistic
-versus production; there are no unanswerable or adversarial questions yet; faithfulness is
-a keyword proxy, not a judge model. Those are the honest edges, not bugs.
+versus production; refusal detection is pattern-based, not a classifier; and the LLM
+judge is only as trustworthy as its published human-agreement number — which is why the
+tooling to measure that agreement ships in the box. Those are the honest edges, not bugs.
 
 ## Related projects
 

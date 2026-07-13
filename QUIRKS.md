@@ -10,18 +10,17 @@ This document catalogs the intentional rough edges and design choices that make
 
 ## 1. Corpus Heterogeneity
 
-The bench accepts three corpus formats from `acme-parts-cloud` exports:
+The bench accepts two table schemas plus a general JSONL shape:
 
 | Format | Source | Key columns |
 |--------|--------|-------------|
-| Parts v1 CSV | Legacy export | `pn`, `desc`, `rev`, `state` |
-| Parts v2 CSV | Current export | `part_number`, `description`, `revision`, `lifecycle_state` |
-| JSONL | Streaming API export | `id`, `part_number`, `description` |
+| Parts CSV | Parts export | `part_number`, `name`, `category`, `uom`, `status` |
+| Suppliers CSV | Supplier export | `supplier_code`, `name`, `country`, `contact_email`, `active` |
+| JSONL | General documents | `doc_id`, `text`, optional `metadata` |
 
-`loader.py` auto-detects format by peeking at the CSV header row. A corpus built from
-multiple export formats will have mixed metadata richness — some chunks will carry
-revision and state fields; others will not. Retrieval metrics are computed purely on
-text similarity, so these gaps don't break scoring, but generation quality varies.
+`loader.py` distinguishes the two CSV shapes by header and treats any other CSV as a
+parts table. Unsupported legacy column names may load as blank fields, so use JSONL for
+arbitrary schemas rather than assuming loose CSV aliases are normalized.
 
 ---
 
@@ -88,22 +87,21 @@ CI runs use `MockEmbedder` (deterministic hash-based vectors, no model download)
 for 10 docs). This is intentional: CI tests correctness of metric computation, not
 embedding quality.
 
-When running with the real `SentenceTransformerEmbedder` (`all-MiniLM-L6-v2`), expect
-Hit@1 ≈ 60-80% on template-generated QA pairs (questions are derived from description
-text, so retrieval should be strong).
+The committed `all-MiniLM-L6-v2` sample scores Hit@1 **47.3%** and Hit@5 **72.7%** at
+256/512-character chunks. Treat those artifacts as the baseline instead of assuming a
+60-80% Hit@1 range.
 
 ---
 
 ## 7. Ollama Generation — Graceful Degradation
 
 `generation.py` calls `GET /api/tags` to probe Ollama before sending any generation
-request. If Ollama is not running, the generation command exits with a warning rather
-than an error. The `bench` command auto-skips the generation phase when Ollama is
-unavailable and still produces retrieval metrics.
+request. If Ollama is not running, the standalone generation command exits nonzero;
+`bench` auto-skips generation and still produces retrieval metrics.
 
-Default model: `gemma:2b`. Override with `--model` flag. The bench does not validate
-that the requested model is actually pulled — if the model is missing, Ollama will
-return an error that surfaces as a `GenerationResult` with `answer=None`.
+Default model: `gemma3:4b`. Override it with `--model`. The bench does not validate that
+the requested model is pulled; a missing model is captured as a `GenerationResult`
+whose generated answer starts with `[ERROR:` and is counted in error metrics.
 
 ---
 
@@ -113,9 +111,16 @@ return an error that surfaces as a `GenerationResult` with `answer=None`.
 retrieved context — not semantic entailment. A fluent-sounding answer with no shared
 keywords scores 0.0. A terse answer that repeats exact keywords from context scores 1.0.
 
-This is intentionally a lightweight proxy, not a full NLI faithfulness check. It is
-sufficient to distinguish "Ollama is hallucinating" from "Ollama is grounding answers in
-context" at a population level.
+This is intentionally a lightweight proxy, not a full NLI faithfulness check. It is a
+directional lexical-overlap signal and cannot by itself prove factual grounding or
+distinguish every hallucination.
+
+For per-answer verdicts, use `rag-eval judge` — a rubric-driven LLM judge with a
+versioned prompt (`rag/eval/prompts/judge_v1.md`). The judge model must differ from the
+answer model (the tool refuses self-grading). Judge scores should themselves be
+validated: `rag-eval judge --grade-sheet` exports a seeded, blinded CSV plus a separate
+judge key, and `rag-eval agreement` reports human/judge agreement plus Cohen's kappa.
+**A judge score published without an agreement number is an opinion, not a metric.**
 
 ---
 
@@ -128,9 +133,20 @@ duplicates in large QA datasets generated from small corpora.
 
 ---
 
-## 10. No Negative / Adversarial QA
+## 10. Unanswerable QA — Refusal Detection Is Pattern-Based
 
-All generated QA pairs have a ground-truth answer in the corpus. There are no
-unanswerable questions (questions whose answer is not present). Precision at recall
-curves will be optimistic compared to production RAG deployments that must handle
-out-of-scope queries.
+`qa-gen --unanswerable N` (and `bench`, 5 by default) generates questions about part
+numbers and suppliers that provably do not exist in the corpus. The correct behavior is
+a refusal; answering anyway is a hallucination. The generation prompt instructs the
+model to reply with a fixed refusal sentence, and `is_refusal()` matches a broad set of
+refusal phrasings — but it is a regex, not a classifier. A model that refuses in a
+sufficiently creative way will be miscounted as answering. Both rates are published:
+`correct_refusal_rate` (unanswerable questions refused — higher is better) and
+`false_refusal_rate` (answerable questions refused — lower is better; a system that
+refuses everything is useless, not safe).
+
+Generation errors remain explicit and count against correct-refusal success. They are
+not silently removed from the negative-question denominator.
+
+Unanswerable items are excluded from retrieval metrics: with no correct document to
+retrieve, Hit@k over them is noise.

@@ -55,7 +55,7 @@ def _make_embedder(model_name: str):
 
 
 @click.group()
-@click.version_option("1.0.0", prog_name="rag-eval")
+@click.version_option("1.1.0", prog_name="rag-eval")
 def cli() -> None:
     """rag-eval-bench — benchmark RAG pipelines against synthetic ground truth.
 
