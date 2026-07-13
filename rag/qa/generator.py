@@ -32,6 +32,17 @@ GENERIC_TEMPLATES = [
     ("What information is available about {topic}?", "{summary}"),
 ]
 
+# Questions the corpus deliberately cannot answer. A correct system refuses;
+# answering anyway is a hallucination. Refusing correctly is scored — most RAG
+# evals skip this entirely.
+UNANSWERABLE_TEMPLATES = [
+    "What is the status of part {fake_pn}?",
+    "What category does part {fake_pn} belong to?",
+    "What country is supplier {fake_supplier} located in?",
+    "What is the unit price history for part {fake_pn}?",
+    "Who approved the latest revision of part {fake_pn}?",
+]
+
 
 def _extract_fields(doc: Document) -> dict[str, str]:
     """Extract template fields from document metadata + text."""
@@ -116,6 +127,81 @@ def generate_qa_dataset(
             break
 
     return all_items[:max_items]
+
+
+def generate_unanswerable_items(
+    docs: list[Document],
+    n: int = 5,
+    seed: int = 42,
+) -> list[QAItem]:
+    """Generate questions the corpus provably cannot answer.
+
+    Fake part numbers / supplier names are drawn deterministically from the seed
+    and checked against the corpus so they are guaranteed absent. The expected
+    behavior is a refusal; ``metadata["unanswerable"]`` marks these items so the
+    evaluators can score correct-refusal rate separately.
+
+    These items carry an empty ``source_doc_id`` and are excluded from
+    retrieval metrics (there is no right document to retrieve).
+    """
+    rng = random.Random(seed)
+
+    # Collect every identifier that actually exists so fakes never collide.
+    existing: set[str] = set()
+    corpus_text = "\n".join(doc.text.casefold() for doc in docs)
+    for doc in docs:
+        for value in doc.metadata.values():
+            if value:
+                existing.add(str(value).lower())
+        existing.update(w.lower() for w in doc.text.split())
+
+    def fake_part_number() -> str:
+        while True:
+            candidate = f"PN-{rng.randint(90000, 99999)}"
+            normalized = candidate.casefold()
+            if normalized not in existing and normalized not in corpus_text:
+                existing.add(normalized)
+                return candidate
+
+    def fake_supplier() -> str:
+        while True:
+            candidate = f"Synthetic Supplier {rng.randint(90000, 99999)}"
+            normalized = candidate.casefold()
+            if normalized not in existing and normalized not in corpus_text:
+                existing.add(normalized)
+                return candidate
+
+    items: list[QAItem] = []
+    for i in range(n):
+        template = UNANSWERABLE_TEMPLATES[i % len(UNANSWERABLE_TEMPLATES)]
+        fields = {}
+        if "{fake_pn}" in template:
+            fields["fake_pn"] = fake_part_number()
+        if "{fake_supplier}" in template:
+            fields["fake_supplier"] = fake_supplier()
+        question = template.format(**fields)
+        items.append(
+            QAItem(
+                qa_id=f"qa_unanswerable_{i:03d}",
+                question=question,
+                answer="",  # correct behavior is a refusal, not an answer
+                source_doc_id="",
+                source_text="",
+                metadata={"unanswerable": True, "template_index": i % len(UNANSWERABLE_TEMPLATES)},
+            )
+        )
+    return items
+
+
+def select_generation_items(items: list[QAItem], max_items: int) -> list[QAItem]:
+    """Select a bounded generation set without dropping appended negatives."""
+    if max_items <= 0:
+        return []
+    unanswerable = [item for item in items if item.metadata.get("unanswerable")]
+    answerable = [item for item in items if not item.metadata.get("unanswerable")]
+    selected_unanswerable = unanswerable[:max_items]
+    answerable_slots = max_items - len(selected_unanswerable)
+    return answerable[:answerable_slots] + selected_unanswerable
 
 
 def deduplicate_questions(items: list[QAItem]) -> list[QAItem]:
