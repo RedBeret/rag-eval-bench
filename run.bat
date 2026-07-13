@@ -1,6 +1,6 @@
 @echo off
 REM rag-eval-bench — Quick start for Windows
-REM Requires Python 3.11+ and pip
+REM Requires Python 3.12+ and pip
 
 echo [rag-eval-bench] Setting up virtual environment...
 python -m venv .venv

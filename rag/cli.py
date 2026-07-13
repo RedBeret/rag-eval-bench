@@ -18,11 +18,22 @@ from rag.eval.generation import (
     compute_generation_metrics,
     evaluate_generation,
 )
+from rag.eval.judge import (
+    compute_agreement,
+    compute_judge_metrics,
+    export_grade_sheet,
+    judge_results,
+)
 from rag.eval.retrieval import compute_retrieval_metrics, evaluate_retrieval
 from rag.index.embedder import MockEmbedder, SentenceTransformerEmbedder
 from rag.index.store import VectorStore
-from rag.qa.generator import deduplicate_questions, generate_qa_dataset
-from rag.qa.types import QAItem
+from rag.qa.generator import (
+    deduplicate_questions,
+    generate_qa_dataset,
+    generate_unanswerable_items,
+    select_generation_items,
+)
+from rag.qa.types import GenerationResult, QAItem
 from rag.report import builder as report_builder
 
 console = Console()
@@ -44,7 +55,7 @@ def _make_embedder(model_name: str):
 
 
 @click.group()
-@click.version_option("1.0.0", prog_name="rag-eval")
+@click.version_option("1.1.0", prog_name="rag-eval")
 def cli() -> None:
     """rag-eval-bench — benchmark RAG pipelines against synthetic ground truth.
 
@@ -120,12 +131,18 @@ def index(corpus: Path, persist_dir: Path | None, model: str, chunk_size: int, r
 @click.option(
     "--seed", default=42, show_default=True, help="Random seed for reproducible sampling."
 )
-def qa_gen(corpus: Path, out: Path, max_items: int, seed: int) -> None:
+@click.option(
+    "--unanswerable",
+    default=0,
+    show_default=True,
+    help="Also generate N questions the corpus cannot answer (scores correct-refusal rate).",
+)
+def qa_gen(corpus: Path, out: Path, max_items: int, seed: int, unanswerable: int) -> None:
     """Generate ground-truth QA pairs from a corpus file.
 
     \b
     Example:
-      rag-eval qa-gen parts_v1.csv --out qa.json --max-items 100
+      rag-eval qa-gen parts_v1.csv --out qa.json --max-items 100 --unanswerable 10
     """
     docs = load_corpus(corpus)
     console.print(f"[cyan]Loaded {len(docs):,} documents[/cyan]")
@@ -133,6 +150,10 @@ def qa_gen(corpus: Path, out: Path, max_items: int, seed: int) -> None:
     items = generate_qa_dataset(docs, max_items=max_items, seed=seed)
     items = deduplicate_questions(items)
     console.print(f"[cyan]Generated {len(items):,} QA pairs (deduplicated)[/cyan]")
+
+    if unanswerable > 0:
+        items += generate_unanswerable_items(docs, n=unanswerable, seed=seed)
+        console.print(f"[cyan]Added {unanswerable} unanswerable questions[/cyan]")
 
     _save_qa(items, out)
     console.print(f"[green]✓ Saved QA pairs → {out}[/green]")
@@ -204,7 +225,7 @@ def retrieval(qa: Path, corpus: Path, k: int, model: str, out: Path | None) -> N
     "--model",
     default=DEFAULT_MODEL,
     show_default=True,
-    help="Ollama model name (e.g. gemma:2b, mistral).",
+    help="Ollama model name (e.g. gemma3:4b, mistral).",
 )
 @click.option(
     "--ollama-url", default=DEFAULT_OLLAMA_URL, show_default=True, help="Ollama server URL."
@@ -221,12 +242,12 @@ def generation(
 
     \b
     Requires a running Ollama server with the target model pulled:
-      ollama pull gemma:2b
+      ollama pull gemma3:4b
       ollama serve
 
     \b
     Example:
-      rag-eval generation qa.json parts_v1.csv --model gemma:2b
+      rag-eval generation qa.json parts_v1.csv --model gemma3:4b
     """
     if not _is_ollama_available(ollama_url):
         console.print(f"[red]Ollama not available at {ollama_url}[/red]")
@@ -236,7 +257,7 @@ def generation(
 
     console.print(f"[green]✓ Ollama available — model: {model}[/green]")
 
-    qa_items = _load_qa(qa)[:max_items]
+    qa_items = select_generation_items(_load_qa(qa), max_items=max_items)
     docs = load_corpus(corpus)
     chunks = chunk_corpus(docs)
     embedder = _make_embedder("all-MiniLM-L6-v2")
@@ -285,6 +306,12 @@ def generation(
 @click.option("--seed", default=42, show_default=True, help="Random seed.")
 @click.option("--skip-generation", is_flag=True, help="Skip Ollama generation even if available.")
 @click.option(
+    "--unanswerable",
+    default=5,
+    show_default=True,
+    help="Number of unanswerable questions to include (0 to disable).",
+)
+@click.option(
     "--out", type=click.Path(path_type=Path), default=None, help="Write full JSON report to file."
 )
 def bench(
@@ -295,6 +322,7 @@ def bench(
     max_qa: int,
     seed: int,
     skip_generation: bool,
+    unanswerable: int,
     out: Path | None,
 ) -> None:
     """Run the full benchmark pipeline: index → qa-gen → retrieval → [generation].
@@ -304,7 +332,7 @@ def bench(
 
     \b
     Example:
-      rag-eval bench parts_v1.csv --model gemma:2b --out bench_report.json
+      rag-eval bench parts_v1.csv --model gemma3:4b --out bench_report.json
     """
     # Load and index
     docs = load_corpus(corpus)
@@ -319,7 +347,13 @@ def bench(
     # QA generation
     qa_items = generate_qa_dataset(docs, max_items=max_qa, seed=seed)
     qa_items = deduplicate_questions(qa_items)
-    console.print(f"[green]✓ Generated {len(qa_items):,} QA pairs[/green]")
+    if unanswerable > 0:
+        qa_items += generate_unanswerable_items(docs, n=unanswerable, seed=seed)
+    console.print(
+        f"[green]✓ Generated {len(qa_items):,} QA pairs"
+        + (f" ({unanswerable} unanswerable)" if unanswerable else "")
+        + "[/green]"
+    )
 
     # Retrieval eval
     retr_results = evaluate_retrieval(qa_items, store, k=k)
@@ -333,7 +367,8 @@ def bench(
         console.print("[yellow]Skipping generation eval by request.[/yellow]")
     elif _is_ollama_available():
         console.print(f"[cyan]Ollama available — running generation eval with {model}...[/cyan]")
-        gen_results = evaluate_generation(qa_items[:50], store, model=model, k=k)
+        gen_items = select_generation_items(qa_items, max_items=50)
+        gen_results = evaluate_generation(gen_items, store, model=model, k=k)
         gen_metrics = compute_generation_metrics(gen_results)
         report_builder.print_generation_metrics(gen_metrics)
     else:
@@ -362,6 +397,121 @@ def bench(
             },
             out,
         )
+
+
+# ---------------------------------------------------------------------------
+# judge (LLM-as-judge over a generation report)
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.argument("report", type=click.Path(exists=True, path_type=Path))
+@click.option(
+    "--judge-model", required=True, help="Ollama judge model (must differ from the answer model)."
+)
+@click.option(
+    "--ollama-url", default=DEFAULT_OLLAMA_URL, show_default=True, help="Ollama server URL."
+)
+@click.option(
+    "--out", type=click.Path(path_type=Path), default=None, help="Write judged JSON report to file."
+)
+@click.option(
+    "--grade-sheet",
+    type=click.Path(path_type=Path),
+    default=None,
+    help="Also export a CSV of judged answers for hand-grading (agreement study).",
+)
+@click.option(
+    "--grade-n",
+    default=20,
+    show_default=True,
+    help="How many answers to include in the grade sheet.",
+)
+@click.option(
+    "--grade-seed", default=42, show_default=True, help="Seed for the blinded grade sample."
+)
+def judge(
+    report: Path,
+    judge_model: str,
+    ollama_url: str,
+    out: Path | None,
+    grade_sheet: Path | None,
+    grade_n: int,
+    grade_seed: int,
+) -> None:
+    """Grade a generation report with a rubric-driven LLM judge.
+
+    \b
+    REPORT is a JSON report produced by `rag-eval generation --out` or
+    `rag-eval bench --out`. The judge model must differ from the answer
+    model — self-grading inflates scores, and the tool refuses to do it.
+    The rubric lives in rag/eval/prompts/ and is versioned.
+
+    \b
+    Example:
+      rag-eval generation qa.json parts.csv --model gemma3:4b --out gen.json
+      rag-eval judge gen.json --judge-model qwen3:8b --grade-sheet grades.csv
+    """
+    if not _is_ollama_available(ollama_url):
+        console.print(f"[red]Ollama not available at {ollama_url}[/red]")
+        sys.exit(1)
+
+    data = json.loads(report.read_text(encoding="utf-8"))
+    raw_results = data.get("results") or (data.get("generation") or {}).get("results") or []
+    if not raw_results:
+        console.print(f"[red]No generation results found in {report}[/red]")
+        sys.exit(1)
+    gen_results = [GenerationResult.from_dict(r) for r in raw_results]
+
+    console.print(f"[cyan]Judging {len(gen_results)} answers with {judge_model}...[/cyan]")
+    try:
+        judged = judge_results(gen_results, judge_model=judge_model, base_url=ollama_url)
+    except ValueError as exc:
+        console.print(f"[red]{exc}[/red]")
+        sys.exit(1)
+
+    metrics = compute_judge_metrics(judged)
+    report_builder.print_judge_metrics(metrics)
+
+    if out:
+        report_builder.save_report(
+            {"type": "judge", "metrics": metrics, "results": [j.to_dict() for j in judged]},
+            out,
+        )
+    if grade_sheet:
+        n_written = export_grade_sheet(judged, grade_sheet, n=grade_n, seed=grade_seed)
+        console.print(
+            f"[green]✓ Grade sheet ({n_written} rows) → {grade_sheet}[/green]\n"
+            f"  Judge key → [dim]{grade_sheet.with_suffix('.judge-key.csv')}[/dim]\n"
+            "  Fill in the [bold]human_verdict[/bold] column, then run:\n"
+            f"  [dim]rag-eval agreement {grade_sheet}[/dim]"
+        )
+
+
+# ---------------------------------------------------------------------------
+# agreement (human/judge agreement study)
+# ---------------------------------------------------------------------------
+
+
+@cli.command()
+@click.argument("grade_sheet", type=click.Path(exists=True, path_type=Path))
+def agreement(grade_sheet: Path) -> None:
+    """Compute human/judge agreement from a hand-graded sheet.
+
+    \b
+    GRADE_SHEET is the CSV exported by `rag-eval judge --grade-sheet`,
+    with the human_verdict column filled in. Reports raw agreement and
+    Cohen's kappa. Publish these next to any judge score — a judge you
+    haven't checked against a human is just a second opinion, not a metric.
+    """
+    try:
+        stats = compute_agreement(grade_sheet)
+    except ValueError as exc:
+        raise click.ClickException(str(exc)) from exc
+    if stats.get("n_graded", 0) == 0:
+        console.print("[red]No rows with human_verdict filled in.[/red]")
+        sys.exit(1)
+    report_builder.print_agreement(stats)
 
 
 if __name__ == "__main__":

@@ -75,6 +75,8 @@ class GenerationResult:
     context_used: str
     faithfulness_score: float  # 0.0–1.0 keyword overlap proxy
     model: str
+    unanswerable: bool = False  # question deliberately has no answer in corpus
+    refused: bool = False  # model declined to answer
 
     def to_dict(self) -> dict:
         return {
@@ -85,4 +87,20 @@ class GenerationResult:
             "context_used": self.context_used,
             "faithfulness_score": self.faithfulness_score,
             "model": self.model,
+            "unanswerable": self.unanswerable,
+            "refused": self.refused,
         }
+
+    @classmethod
+    def from_dict(cls, d: dict) -> GenerationResult:
+        return cls(
+            qa_id=d["qa_id"],
+            question=d["question"],
+            expected_answer=d["expected_answer"],
+            generated_answer=d["generated_answer"],
+            context_used=d.get("context_used", ""),
+            faithfulness_score=d.get("faithfulness_score", 0.0),
+            model=d.get("model", "unknown"),
+            unanswerable=d.get("unanswerable", False),
+            refused=d.get("refused", False),
+        )

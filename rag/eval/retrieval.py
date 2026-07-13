@@ -35,6 +35,11 @@ def evaluate_retrieval(
     results: list[RetrievalResult] = []
 
     for item in qa_items:
+        if not item.source_doc_id or item.metadata.get("unanswerable"):
+            # Unanswerable items have no correct document; scoring them here
+            # would only add noise. They are evaluated by correct-refusal rate
+            # in the generation stage instead.
+            continue
         retrieved = store.query(item.question, k=k)
         retrieved_ids = [r["doc_id"] for r in retrieved]
         retrieved_parents = [_parent_id(rid) for rid in retrieved_ids]

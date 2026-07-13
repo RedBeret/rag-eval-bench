@@ -1,0 +1,555 @@
+{
+  "type": "judge",
+  "metrics": {
+    "n_judged": 30,
+    "judge_model": "phi4:latest",
+    "prompt_version": "v1",
+    "errors": 0,
+    "correct_rate": 0.8,
+    "partial_rate": 0.0,
+    "incorrect_rate": 0.2,
+    "grounded_rate": 0.8
+  },
+  "results": [
+    {
+      "qa_id": "qa_0000_1",
+      "question": "What category does part PN-0082 belong to?",
+      "expected_answer": "Brackets",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0088 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.\n\nPart number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The generated answer is a refusal and contradicts the expected 'answerable' status by not providing the required information.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The generated answer is a refusal and contradicts the expected 'answerable' status by not providing the required information.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0000_2",
+      "question": "What is the status of part PN-0082?",
+      "expected_answer": "obsolete",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.\n\nPart number 2019-PN-8 is a Oil Seal in the Seals category. Unit of measure: EA. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0001_1",
+      "question": "What category does part PN-0015 belong to?",
+      "expected_answer": "Bearings",
+      "generated_answer": "Bearings",
+      "context_used": "Part number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0015 is a Aluminum thrust washer, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Bearings' matches the expected answer and is supported by the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Bearings' matches the expected answer and is supported by the context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0001_2",
+      "question": "What is the status of part PN-0015?",
+      "expected_answer": "obsolete",
+      "generated_answer": "Obsolete.",
+      "context_used": "Part number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0015 is a Aluminum thrust washer, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly states the status of part PN-0015 as 'obsolete', which matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly states the status of part PN-0015 as 'obsolete', which matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0002_1",
+      "question": "What category does part PN-0004 belong to?",
+      "expected_answer": "Fittings",
+      "generated_answer": "Fittings",
+      "context_used": "Part number PN-0004 is a Stainless steel tee fitting, 1in ID in the Fittings category. Unit of measure: FT. Status: active.\n\nPart number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Fittings' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Fittings' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0002_2",
+      "question": "What is the status of part PN-0004?",
+      "expected_answer": "active",
+      "generated_answer": "active",
+      "context_used": "Part number PN-0004 is a Stainless steel tee fitting, 1in ID in the Fittings category. Unit of measure: FT. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'active' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'active' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0003_1",
+      "question": "What category does part PN-0036 belong to?",
+      "expected_answer": "Bearings",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0060 is a Nylon bearing race, 25mm bore in the Bearings category. Unit of measure: FT. Status: superseded.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0003_2",
+      "question": "What is the status of part PN-0036?",
+      "expected_answer": "active",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0004_1",
+      "question": "What category does part PN-0032 belong to?",
+      "expected_answer": "Brackets",
+      "generated_answer": "Brackets",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0032 is a Mounting Bracket in the Brackets category. Unit of measure: BOX. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Brackets' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Brackets' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0004_2",
+      "question": "What is the status of part PN-0032?",
+      "expected_answer": "active",
+      "generated_answer": "Active.",
+      "context_used": "Part number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0032 is a Mounting Bracket in the Brackets category. Unit of measure: BOX. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Active' correctly states the expected fact and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Active' correctly states the expected fact and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0005_1",
+      "question": "What category does part PN-0029 belong to?",
+      "expected_answer": "Brackets",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0037 is a Stainless steel cotter pin, 1/4-20 thread, 12mm length in the Fasteners category. Unit of measure: EA. Status: superseded.\n\nPart number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The generated answer is a refusal and contradicts the expected 'answerable' status by not providing the correct category.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The generated answer is a refusal and contradicts the expected 'answerable' status by not providing the correct category.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0005_2",
+      "question": "What is the status of part PN-0029?",
+      "expected_answer": "prototype",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0051 is a Carbon steel oil seal, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "incorrect",
+      "grounded": false,
+      "reasoning": "The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"incorrect\",\n  \"grounded\": false,\n  \"reasoning\": \"The system refused to answer despite the question being marked as 'answerable', and it did not provide any factual claims from the context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_0006_1",
+      "question": "What category does part PN-0018 belong to?",
+      "expected_answer": "Fittings",
+      "generated_answer": "Fittings",
+      "context_used": "Part number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0088 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Fittings' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Fittings' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0006_2",
+      "question": "What is the status of part PN-0018?",
+      "expected_answer": "active",
+      "generated_answer": "active",
+      "context_used": "Part number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0012 is a Aluminum thrust washer, 50mm OD in the Bearings category. Unit of measure: EA. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'active' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'active' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0007_1",
+      "question": "What category does part P14 belong to?",
+      "expected_answer": "Seals",
+      "generated_answer": "Seals",
+      "context_used": "Part number P14 is a Carbon steel o-ring, 2in stroke in the Seals category. Unit of measure: BOX. Status: active.\n\nPart number P39 is a Cotter Pin in the Fasteners category. Unit of measure: BOX. Status: obsolete.\n\nPart number P54 is a Torsion Spring in the Springs category. Unit of measure: PK. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Seals' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Seals' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0007_2",
+      "question": "What is the status of part P14?",
+      "expected_answer": "active",
+      "generated_answer": "Part number P14 is active.",
+      "context_used": "Part number P14 is a Carbon steel o-ring, 2in stroke in the Seals category. Unit of measure: BOX. Status: active.\n\nPart number 2019-PN-21 is a Nylon hose barb, 50mm OD in the Fittings category. Unit of measure: FT. Status: active.\n\nPart number P75 is a Aluminum angle bracket, 50mm OD in the Brackets category. Unit of measure: LB. Status: obsolete.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly states the status of part P14 as 'active', which matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly states the status of part P14 as 'active', which matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0008_1",
+      "question": "What category does part 2019-PN-70 belong to?",
+      "expected_answer": "Fasteners",
+      "generated_answer": "Fasteners",
+      "context_used": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.\n\nPart number 2019-PN-70 is a Aluminum lock nut, 1/2-13 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: obsolete.\n\nPart number 2019-PN-67 is a Zinc-plated angle bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Fasteners' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Fasteners' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0008_2",
+      "question": "What is the status of part 2019-PN-70?",
+      "expected_answer": "obsolete",
+      "generated_answer": "Obsolete.",
+      "context_used": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.\n\nPart number 2019-PN-70 is a Aluminum lock nut, 1/2-13 thread, 20mm length in the Fasteners category. Unit of measure: FT. Status: obsolete.\n\nPart number 2019-PN-67 is a Zinc-plated angle bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Obsolete' matches the expected fact and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Obsolete' matches the expected fact and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0009_1",
+      "question": "What category does part PN-0012 belong to?",
+      "expected_answer": "Bearings",
+      "generated_answer": "Bearings",
+      "context_used": "Part number PN-0012 is a Aluminum thrust washer, 50mm OD in the Bearings category. Unit of measure: EA. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Bearings' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Bearings' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0009_2",
+      "question": "What is the status of part PN-0012?",
+      "expected_answer": "active",
+      "generated_answer": "active",
+      "context_used": "Part number PN-0012 is a Aluminum thrust washer, 50mm OD in the Bearings category. Unit of measure: EA. Status: active.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0018 is a Stainless steel elbow fitting, 50mm OD in the Fittings category. Unit of measure: PK. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'active' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'active' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0010_1",
+      "question": "What category does part 2019-PN-76 belong to?",
+      "expected_answer": "Seals",
+      "generated_answer": "Seals",
+      "context_used": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.\n\nPart number 2019-PN-67 is a Zinc-plated angle bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Seals' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Seals' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0010_2",
+      "question": "What is the status of part 2019-PN-76?",
+      "expected_answer": "active",
+      "generated_answer": "active",
+      "context_used": "Part number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.\n\nPart number 2019-PN-67 is a Zinc-plated angle bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: prototype.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'active' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'active' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0011_1",
+      "question": "What category does part 2019-PN-55 belong to?",
+      "expected_answer": "Bearings",
+      "generated_answer": "Bearings",
+      "context_used": "Part number 2019-PN-55 is a Ball Bearing in the Bearings category. Unit of measure: EA. Status: obsolete.\n\nPart number 2019-PN-65 is a Zinc-plated shelf bracket, 50mm OD in the Brackets category. Unit of measure: FT. Status: superseded.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Bearings' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Bearings' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0011_2",
+      "question": "What is the status of part 2019-PN-55?",
+      "expected_answer": "obsolete",
+      "generated_answer": "Obsolete.",
+      "context_used": "Part number 2019-PN-55 is a Ball Bearing in the Bearings category. Unit of measure: EA. Status: obsolete.\n\nPart number 2019-PN-65 is a Zinc-plated shelf bracket, 50mm OD in the Brackets category. Unit of measure: FT. Status: superseded.\n\nPart number 2019-PN-67 is a Zinc-plated angle bracket, 2in stroke in the Brackets category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Obsolete.' matches the expected fact and is fully supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Obsolete.' matches the expected fact and is fully supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_0012_1",
+      "question": "What category does part PN-0005 belong to?",
+      "expected_answer": "Springs",
+      "generated_answer": "Springs",
+      "context_used": "Part number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0015 is a Aluminum thrust washer, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number PN-0005 is a Torsion Spring in the Springs category. Unit of measure: FT. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer 'Springs' matches the expected answer and is supported by the retrieved context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer 'Springs' matches the expected answer and is supported by the retrieved context.\"\n}",
+      "metadata": {
+        "unanswerable": false,
+        "refused": false
+      }
+    },
+    {
+      "qa_id": "qa_unanswerable_000",
+      "question": "What is the status of part PN-91824?",
+      "expected_answer": "",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0026 is a Zinc-plated o-ring, 1in ID in the Seals category. Unit of measure: EA. Status: active.\n\nPart number 2019-PN-9 is a Stainless steel o-ring, 2in stroke in the Seals category. Unit of measure: PK. Status: obsolete.\n\nPart number 2019-PN-8 is a Oil Seal in the Seals category. Unit of measure: EA. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly refuses to provide information about PN-91824 as it is not present in the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly refuses to provide information about PN-91824 as it is not present in the context.\"\n}",
+      "metadata": {
+        "unanswerable": true,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_unanswerable_001",
+      "question": "What category does part PN-90409 belong to?",
+      "expected_answer": "",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number 2019-PN-9 is a Stainless steel o-ring, 2in stroke in the Seals category. Unit of measure: PK. Status: obsolete.\n\nPart number 2019-PN-90 is a Thrust Washer in the Bearings category. Unit of measure: BOX. Status: active.\n\nPart number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly refuses to provide information not present in the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly refuses to provide information not present in the context.\"\n}",
+      "metadata": {
+        "unanswerable": true,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_unanswerable_002",
+      "question": "What country is supplier Synthetic Supplier 94506 located in?",
+      "expected_answer": "",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number 2019-PN-64 is a Nylon gasket, 1in ID in the Seals category. Unit of measure: BOX. Status: obsolete.\n\nPart number 2019-PN-65 is a Zinc-plated shelf bracket, 50mm OD in the Brackets category. Unit of measure: FT. Status: superseded.\n\nPart number PN-0047 is a Aluminum gasket, 50mm OD in the Seals category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer is a refusal with no unsupported factual claim, which aligns with the expected response for an unanswerable question.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer is a refusal with no unsupported factual claim, which aligns with the expected response for an unanswerable question.\"\n}",
+      "metadata": {
+        "unanswerable": true,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_unanswerable_003",
+      "question": "What is the unit price history for part PN-94012?",
+      "expected_answer": "",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number PN-0022 is a Gasket in the Seals category. Unit of measure: BOX. Status: superseded.\n\nPart number PN-0081 is a Carbon steel gasket, 1in ID in the Seals category. Unit of measure: FT. Status: active.\n\nPart number PN-0047 is a Aluminum gasket, 50mm OD in the Seals category. Unit of measure: BOX. Status: prototype.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly refuses to provide information not present in the context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly refuses to provide information not present in the context.\"\n}",
+      "metadata": {
+        "unanswerable": true,
+        "refused": true
+      }
+    },
+    {
+      "qa_id": "qa_unanswerable_004",
+      "question": "Who approved the latest revision of part PN-93657?",
+      "expected_answer": "",
+      "generated_answer": "I don't know based on the provided context.",
+      "context_used": "Part number 2019-PN-66 is a Gasket in the Seals category. Unit of measure: LB. Status: superseded.\n\nPart number PN-0017 is a Carbon steel bearing race, 2in stroke in the Bearings category. Unit of measure: LB. Status: obsolete.\n\nPart number 2019-PN-76 is a Gasket in the Seals category. Unit of measure: PK. Status: active.",
+      "answer_model": "gemma3:4b",
+      "verdict": "correct",
+      "grounded": true,
+      "reasoning": "The generated answer correctly refuses to provide an unsupported factual claim based on the unanswerable context.",
+      "judge_model": "phi4:latest",
+      "prompt_version": "v1",
+      "raw_response": "{\n  \"verdict\": \"correct\",\n  \"grounded\": true,\n  \"reasoning\": \"The generated answer correctly refuses to provide an unsupported factual claim based on the unanswerable context.\"\n}",
+      "metadata": {
+        "unanswerable": true,
+        "refused": true
+      }
+    }
+  ]
+}

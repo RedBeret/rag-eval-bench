@@ -1,9 +1,15 @@
 {
   "n_questions": 30,
-  "model": "gpt-oss:20b",
-  "errors": 1,
-  "avg_faithfulness_score": 0.8491,
-  "min_faithfulness_score": 0.375,
+  "model": "gemma3:4b",
+  "errors": 0,
+  "avg_faithfulness_score": 0.76,
+  "min_faithfulness_score": 0.0,
   "max_faithfulness_score": 1.0,
-  "sec_per_answer_avg": 4.53
+  "n_answerable": 25,
+  "n_unanswerable": 5,
+  "answerable_errors": 0,
+  "unanswerable_errors": 0,
+  "false_refusal_rate": 0.24,
+  "correct_refusal_rate": 1.0,
+  "sec_per_answer_avg": 1.95
 }

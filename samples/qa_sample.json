@@ -1648,5 +1648,60 @@
       "doc_type": "part",
       "template_index": 2
     }
+  },
+  {
+    "qa_id": "qa_unanswerable_000",
+    "question": "What is the status of part PN-91824?",
+    "answer": "",
+    "source_doc_id": "",
+    "source_text": "",
+    "metadata": {
+      "unanswerable": true,
+      "template_index": 0
+    }
+  },
+  {
+    "qa_id": "qa_unanswerable_001",
+    "question": "What category does part PN-90409 belong to?",
+    "answer": "",
+    "source_doc_id": "",
+    "source_text": "",
+    "metadata": {
+      "unanswerable": true,
+      "template_index": 1
+    }
+  },
+  {
+    "qa_id": "qa_unanswerable_002",
+    "question": "What country is supplier Synthetic Supplier 94506 located in?",
+    "answer": "",
+    "source_doc_id": "",
+    "source_text": "",
+    "metadata": {
+      "unanswerable": true,
+      "template_index": 2
+    }
+  },
+  {
+    "qa_id": "qa_unanswerable_003",
+    "question": "What is the unit price history for part PN-94012?",
+    "answer": "",
+    "source_doc_id": "",
+    "source_text": "",
+    "metadata": {
+      "unanswerable": true,
+      "template_index": 3
+    }
+  },
+  {
+    "qa_id": "qa_unanswerable_004",
+    "question": "Who approved the latest revision of part PN-93657?",
+    "answer": "",
+    "source_doc_id": "",
+    "source_text": "",
+    "metadata": {
+      "unanswerable": true,
+      "template_index": 4
+    }
   }
 ]
