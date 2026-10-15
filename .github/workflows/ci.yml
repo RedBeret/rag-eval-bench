@@ -26,7 +26,10 @@ jobs:
           restore-keys: ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: pip install -r requirements.txt -e .
+        # Tests use MockEmbedder, so CUDA wheels and model downloads are unnecessary.
+        run: |
+          pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt -e .
 
       - name: Lint (ruff)
         run: |
