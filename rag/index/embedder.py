@@ -27,7 +27,8 @@ class SentenceTransformerEmbedder:
         if self._model is None:
             from sentence_transformers import SentenceTransformer
 
-            self._model = SentenceTransformer(self._model_name)
+            # Patched model loading must also keep remote Python execution disabled.
+            self._model = SentenceTransformer(self._model_name, trust_remote_code=False)
 
     def embed(self, texts: list[str]) -> list[list[float]]:
         self._load()
